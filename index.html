@@ -3,46 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Projeto GitHub</title>
+    <title>Painel de Comparações</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            background-color: #f4f4f9;
+            background-color: #121212; /* Fundo escuro estilo gamer */
+            color: #ffffff;
         }
-        .card {
+        .container {
             text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            background: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            width: 90%;
+            max-width: 400px;
         }
-        a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
+        h1 {
+            margin-bottom: 1.5rem;
+            color: #00d4ff;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn {
+            display: block;
+            padding: 12px;
+            background-color: #00d4ff;
+            color: #121212;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-weight: bold;
-            transition: background 0.3s;
+            font-size: 1.1rem;
+            transition: transform 0.2s, background 0.3s;
         }
-        a:hover {
-            background-color: #0056b3;
+        .btn:hover {
+            background-color: #0099cc;
+            transform: scale(1.05);
         }
+        .btn-mob { background-color: #ffcc00; }
+        .btn-skill { background-color: #ff4d4d; }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>Bem-vindo!</h1>
-        <p>Clique no botão abaixo para ver a comparação:</p>
-        <br>
-        <a href="mob-comparison.html">Acessar Mob Comparison</a>
+    <div class="container">
+        <h1>Wiki Compare</h1>
+        <p>Escolha uma categoria para comparar:</p>
+        
+        <div class="menu">
+            <a href="character-comparison.html" class="btn">👥 Personagens</a>
+            <a href="mob-comparison.html" class="btn btn-mob">👾 Monstros (Mobs)</a>
+            <a href="skill-comparison.html" class="btn btn-skill">⚔️ Habilidades (Skills)</a>
+        </div>
     </div>
 
 </body>
